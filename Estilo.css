@@ -83,7 +83,7 @@ body
 }
 .Grilla
 {
-    margin-top: 7vw;
+    margin-top: 2vw;
 }
 .Prueba-Fondo
 {
@@ -92,4 +92,23 @@ body
     width: 20vw;
     height: 25vh;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+}
+
+
+.horizontal
+{   
+    display: flex;
+    text-align: left;
+}
+.horizontal .Prueba-Fondo
+{
+    background-image: url("Imagenes/poster+.jpg");
+    background-position-y: -10vh;
+    width: 20vw;
+    height: 18vh;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+}
+.horizontal .Contenido
+{
+    display: flex;
 }
