@@ -7,6 +7,7 @@
 
 body
 {
+    display: flex;
     background-image: url("Imagenes/Fondo.png");
     font-family: 'Ubuntu', sans-serif;
     color: #2D2B28;
@@ -22,7 +23,7 @@ body
     margin: 1.4vw;
     border-radius: 5vh;
     overflow: hidden;
-    background-color: cornsilk;
+    background-color: rgba(231, 231, 231, 0.8);
     box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
     cursor: default;
     transition: all 400ms ease;
@@ -125,4 +126,22 @@ body
 {
     margin-top: 7vh;
     margin-left: 35vw;
+}
+.Menu
+{
+    background-color: rgba(238, 159, 46, 0.5);
+    width: 2vw;
+    height: 100%;
+    position: absolute;
+    align-items: left;
+}
+.Menu:hover
+{
+    width: 20vw;
+    background-color: rgba(238, 159, 46, 1);
+ 
+}
+.Cuerpo
+{
+    position: relative;
 }
