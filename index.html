@@ -25,11 +25,11 @@
             <h3>Top 100 </h3>
         </section>
         <!--Prueba icono-->
-        <section class="Icono wrapper">
+        <section class="Icono wrapper" >
             <div class="links">
                 <ul>
-                    <li class="li-list " data-view="list" onclick="GRID()"><i class="fas fa-align-justify"></i></li>                    
-                    <li class="li-" data-view="grid" onclick="LISTO()"><i class="fas fa-th"></i></li>
+                    <li class="li-list " data-view="list" onclick="GRID()" id="Icon-LIST"><i class="fas fa-align-justify"></i></li>                    
+                    <li class="li-" data-view="grid" onclick="LISTO()" id="Icon-GRID"><i class="fas fa-th"></i></li>
                 </ul>
             </div>
         </section>
@@ -262,11 +262,16 @@
     function GRID()
     {
         document.getElementById('GRILL').style.display='none';
+        document.getElementById('Icon-LIST').style.color='rgba(45, 43, 40,0.8)';
+        document.getElementById('Icon-GRID').style.color='rgba(45, 43, 40,0.5)';
         document.getElementById('LISTT').style.display='';
+        
     }
     function LISTO()
     {
         document.getElementById('GRILL').style.display='';
+        document.getElementById('Icon-GRID').style.color='rgba(45, 43, 40,0.8)';
+        document.getElementById('Icon-LIST').style.color='rgba(45, 43, 40,0.5)';
         document.getElementById('LISTT').style.display='none';
     }
 </script>    
