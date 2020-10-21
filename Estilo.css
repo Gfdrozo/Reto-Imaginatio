@@ -374,6 +374,10 @@ body
     .Estrellitas span{
         font-size: 1rem;
     }
+    .links ul
+    {
+        justify-content: center;
+    }
     .links li
     {
         font-size: 18px;
