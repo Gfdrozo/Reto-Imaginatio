@@ -280,7 +280,34 @@ body
     justify-content: space-around;
     flex-flow: wrap;
 }
+/*Iconos*/
+.links ul
+{
+    justify-content: right;
+    display: flex;
+}
 
+.links li
+{
+    margin-left: 1vw;
+    font-size: 25px;
+    cursor: pointer;
+    color: rgba(45, 43, 40,0.5);
+    
+}
+
+.links li:hover
+{
+    color: rgba(45, 43, 40,0.8);
+}
+
+
+.links li
+{
+    color: rgba(45, 43, 40,0.8);
+}
+
+/*Final Iconos*/
   /*jquery*/
 
   @media screen and (max-width:1000px)
