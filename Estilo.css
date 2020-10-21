@@ -338,14 +338,18 @@ body
     {
         display: flex;
         margin-left: 1.5vw;
-        margin-right: 1vw;
+        margin-right: 0.7vw;
         text-align: left;
         
     }
     .horizontal .Estrellitas
     {
         margin-top: 3.5vh;
+        margin-left: 25vw;
        
+    }
+    .Estrellitas span{
+        font-size: 1rem;
     }
 }
 
