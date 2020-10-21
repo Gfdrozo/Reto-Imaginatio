@@ -309,8 +309,6 @@ body
 
   @media screen and (max-width:1000px)
 {
-    
-   
     .Contenido
     {
         text-align: center;
@@ -332,26 +330,22 @@ body
     }
     .horizontal .Contenido
     {
-        margin-top: 3vh;
-    }
-    .horizontal
-    {
-        display: flex;
-        margin-left: 1.5vw;
-        margin-right: 0.7vw;
-        text-align: left;
-        
+        margin-top: 2vh;
     }
     .horizontal .Estrellitas
     {
         margin-top: 3.5vh;
-        margin-left: 25vw;
+        margin-left: 40vw;
        
     }
-    .Estrellitas span{
-        font-size: 1rem;
+
+    .links li
+    {
+        font-size: 22px;
+          
     }
 }
+
 
 @media screen and (max-width:720px)
 {
@@ -363,6 +357,28 @@ body
     }
 
 
+    .horizontal
+    {
+        display: flex;
+        margin-left: 2.5vw;
+        margin-right: 1vw;
+        text-align: left;
+        
+    }
+    .horizontal .Estrellitas
+    {
+        margin-top: 3.5vh;
+        margin-left: 15vw;
+       
+    }
+    .Estrellitas span{
+        font-size: 1rem;
+    }
+    .links li
+    {
+        font-size: 18px;
+          
+    }
 }
 
 
