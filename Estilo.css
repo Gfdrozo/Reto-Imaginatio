@@ -112,6 +112,13 @@ body
     transition: all 400ms ease;
 
 }
+
+.Lista-item:hover
+{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+    transform:  translateY(-3%);
+   
+}
 .horizontal
 {
     display: flex;
@@ -153,7 +160,7 @@ body
 .horizontal .Estrellitas
 {
     margin-top: 7vh;
-    margin-left: 35vw;
+    margin-left: 41vw;
 }
 .Estrellitas span{
     font-size: 1.5rem;
@@ -311,9 +318,14 @@ body
         text-align: left;
         
     }
+    .horizontal .Estrellitas
+    {
+        margin-top: 3.5vh;
+       
+    }
 }
 
-@media screen and (max-width:600px)
+@media screen and (max-width:720px)
 {
    
     .Cuerpo 
