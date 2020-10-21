@@ -49,7 +49,7 @@ body
 }
 .Contenido
 {
-    margin-left: 1.5vw;
+    margin-left: 1.6vw;
 }
 .card h4
 {
@@ -65,7 +65,7 @@ body
 }
 .Cabecera
 {
-    margin-top: 10vh;
+    margin-top: 4vh;
     
 }
 .Superior
@@ -76,15 +76,16 @@ body
 {
     justify-content: right;
 }
-.Superior h1
+.Cabecera h1
 {
     font-family: 'Krona One', sans-serif;
-    font-size: 75px;
+    font-size: 50px;
 }
-.Cabecera h3{
-    line-height: 0%;
+.Cabecera h3
+{
+    line-height: 1vh;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 300;
 }
 .Grilla
@@ -187,7 +188,7 @@ body
     position: relative;
     display: inline-block;
     color: transparent;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   
   .stars-container:before {
@@ -221,3 +222,39 @@ body
   .stars-100:after { width: 100; }
 
   /* Fin estilos estrellas de puntuación */
+
+
+  .row
+{
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+  /*jquery*/
+
+  @media screen and (max-width:1000px)
+{
+    
+   
+    .Contenido
+    {
+        text-align: center;
+        margin-left: 2vw;
+    }
+
+}
+
+@media screen and (max-width:600px)
+{
+   
+    .Cuerpo 
+    {
+        text-align: center;
+        align-items: center;
+    }
+
+}
+
+
+  
