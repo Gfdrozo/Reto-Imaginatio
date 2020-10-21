@@ -20,7 +20,7 @@ body
 {
     width: 100%;
     margin: 1.4vw;
-    border-radius: 3vh;
+    border-radius: 5vh;
     overflow: hidden;
     background-color: cornsilk;
     box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
@@ -96,19 +96,33 @@ body
 
 
 .horizontal
-{   
+{
     display: flex;
+    width: 78.5vw;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
     text-align: left;
+    
 }
 .horizontal .Prueba-Fondo
 {
     background-image: url("Imagenes/poster+.jpg");
-    background-position-y: -10vh;
+    background-position-y: -13vh;
     width: 20vw;
     height: 18vh;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 .horizontal .Contenido
 {
-    display: flex;
+    /*display: flex;*/
+    margin-top: 6vh;
+}
+.Lista .card
+{
+    flex-direction: row;
+}
+.horizontal .Estrellitas
+{
+    margin-top: 7vh;
+    margin-left: 35vw;
 }
