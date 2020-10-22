@@ -19,8 +19,11 @@
         $promrating="SELECT title,avg(rating) AS calificacion, generes FROM movies INNER JOIN rating ON movies.movieId=rating.movieId GROUP BY movies.title HAVING count(title) > 20 ORDER BY avg(rating) DESC";
 
     $result=mysqli_query($conn,$promrating);
+    $TotalPelis=mysql
+    $PeliPorPag=8;
+    $paginas= ceil($TotalPelis/$PeliPorPag);
     ?>
-    <script src="js/jquery.rating.pack.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script>
@@ -92,9 +95,6 @@ $(document).ready(function(){
     </section>
 
         <section class="container Lista" id="LISTT">
-        <?php while($mostrar=$result->fetch_array())
-                {
-        ?>
             <div class="Lista-item horizontal">
                 <div class="Prueba-Fondo"></div>
                 <div class="Contenido">
@@ -105,10 +105,7 @@ $(document).ready(function(){
                     <div><span class="stars-container stars-80">★★★★★</span></div>
                 </div>
               </div>
-              <?php
-        }
-
-        ?>
+            
         </section>    
 
         <nav class="container ">
