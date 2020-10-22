@@ -19,10 +19,10 @@
     <section class="Cuerpo container">
         <section class="container Cabecera">
             <!--div class="Superior"-->
-                <h1>Ranking</h1>
+                <h1 id="Titulo-Principal">Ranking</h1>
                 <!--div class="iconos">Icono</div-->
             <!--/div-->
-            <h3>Top 100 </h3>
+            <h3 id="Subtitulo">Top 100 </h3>
 
             <!--        MENU DESPLEGABLE        -->
             <div id="menu-id" class="Menu">
@@ -48,6 +48,7 @@
         <section class="Icono wrapper" >
             <div class="links">
                 <ul>
+                    <li class="li-" data-view="grid" onclick="Alfabetico()" id="IconA-Z"><i class="fas fa-sort-alpha-down"></i></i></i></li>
                     <li class="li-list " data-view="list" onclick="GRID()" id="Icon-LIST"><i class="fas fa-align-justify"></i></li>                    
                     <li class="li-" data-view="grid" onclick="LISTO()" id="Icon-GRID"><i class="fas fa-th"></i></li>
                 </ul>
@@ -275,6 +276,14 @@
         document.getElementById('Icon-GRID').style.color='rgba(45, 43, 40,0.8)';
         document.getElementById('Icon-LIST').style.color='rgba(45, 43, 40,0.5)';
         document.getElementById('LISTT').style.display='none';
+    }
+
+    function Alfabetico()
+    {
+        document.getElementById('Titulo-Principal').innerHTML="Peliculas"
+        document.getElementById('Subtitulo').innerHTML="A-Z"
+        document.getElementById('IconA-Z').style.color='rgba(45, 43, 40,0.8)';
+        
     }
     function menuMedia(x) {
         if (x.matches) { 
