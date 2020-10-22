@@ -1,10 +1,16 @@
 $(document).ready(() => {
     
     
-    fillCard('#result1');
-    fillCard('#result2');
-    fillCard('#result3')
-    fillCard('#result4')
+    mergeMovies('moana',2016);
+    //mergeMovies('masdfds',2016);
+    //fillCard('#test2');
+    //fillCard('#test3');
+
+    var tarjetas = $('.card')
+    for(var i = 0; i < tarjetas.length; i++){
+        fillCard(tarjetas[i])
+        
+    }
 })
 
 function mergeMovies(searchText, date) {
@@ -48,7 +54,10 @@ function mergeMovies(searchText, date) {
 }
 
 function fillCard(id) {
-    var info = document.querySelector(id+' h4').textContent; 
+    //var info = document.querySelector(id+' h4').textContent;
+    var info = id.querySelector('h4').textContent; 
+    
+    if (info.split('(')[1]!=null) {
     var title = info.split('(',1);
     var anio = info.split('(',2)[1].split(')',1);
     
@@ -60,13 +69,14 @@ function fillCard(id) {
             
 
             let movies = response.data.results;
-            if(movies[0] == null){
-                $('#testi').css("background-image", "url(Imagenes/favicon.png)");
-            }
-            else{
-
-            for (var i=0 ; i < movies.length && movies!=null; i++)
+            if(movies[0] == null)
             {
+                //$('#testi').css("background-image", "url(Imagenes/favicon.png)");
+                $(id.getElementsByClassName('Prueba-Fondo')[0]).css("background-image", "url(Imagenes/favicon.png)");
+            }
+            else
+            {
+<<<<<<< HEAD
                 if(movies[i].release_date.slice(0,4)==anio)
                 {
                     if (movies[i].poster_path === null)
@@ -79,16 +89,31 @@ function fillCard(id) {
                     }
                 
                 $(id+' .Prueba-Fondo').css("background-image", "url("+poster+")");
+=======
+>>>>>>> c202c2d2ce9c38fde58f8edcb2984c05ad71018b
 
-                
+                for (var i=0 ; i < movies.length && movies!=null; i++)
+                {
+                    if(movies[i].release_date.slice(0,4)==anio)
+                    {
+                        if (movies[i].poster_path === null) {
+                            poster = "Imagenes/favicon.png";
+                        } else {
+                            poster = "https://image.tmdb.org/t/p/w185_and_h278_bestv2" + movies[i].poster_path;
+                        }
+                        
+                        $(id.getElementsByClassName('Prueba-Fondo')[0]).css("background-image", "url("+poster+")");
+                        //console.log(id.getElementsByTagName("h4")[0].textContent)
+                    
+                    }
+                };
             }
-            };
-        }
 
         })
         .catch((error) => {
             console.log(error);
         });
 
-
+    }
 }
+
