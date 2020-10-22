@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="Estilo.css">
 
 </head>
-<body onload="LISTO(),Ranking()" >
+<body onload="LISTO(),Ranking(),Valores()" >
     <section class="Cuerpo container" >
         <section class="container Cabecera">
             <!--div class="Superior"-->
@@ -161,7 +161,18 @@
                     <p>Animación/Infantil</p>    
                 </div>
                 <div class="Estrellitas">
-                    <div><span class="stars-container stars-80">★★★★★</span></div>
+                    <div><span class="stars-container "  id="Estrella" >★★★★★</span></div>
+                </div>
+              </div>
+
+              <div class="Lista-item horizontal">
+                <div class="Prueba-Fondo"></div>
+                <div class="Contenido">
+                    <h4>Moana</h4>
+                    <p>Animación/Infantil</p>    
+                </div>
+                <div class="Estrellitas">
+                    <div><span class="stars-container " onload="Valores()">★★★★★</span></div>
                 </div>
               </div>
 
@@ -227,18 +238,7 @@
                     <p>Animación/Infantil</p>    
                 </div>
                 <div class="Estrellitas">
-                    <div><span class="stars-container stars-80">★★★★★</span></div>
-                </div>
-              </div>
-
-              <div class="Lista-item horizontal">
-                <div class="Prueba-Fondo"></div>
-                <div class="Contenido">
-                    <h4>Moana</h4>
-                    <p>Animación/Infantil</p>    
-                </div>
-                <div class="Estrellitas">
-                    <div><span class="stars-container stars-80">★★★★★</span></div>
+                    <div><span class="stars-container " >★★★★★</span></div>
                 </div>
               </div>
         
@@ -296,6 +296,16 @@
         
     }
 
+    var val=40;
+    var elemento = document.getElementById("Estrella");
+
+    function Valores()
+    {  
+         if(val==40)
+        {
+            elemento.className += "stars-40";
+        }
+    }
 
     function menuMedia(x) {
         if (x.matches) { 
