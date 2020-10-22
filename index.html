@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="Estilo.css">
 
 </head>
-<body>
-    <section class="Cuerpo container">
+<body onload="LISTO(),Ranking()" >
+    <section class="Cuerpo container" >
         <section class="container Cabecera">
             <!--div class="Superior"-->
                 <h1 id="Titulo-Principal">Ranking</h1>
@@ -48,9 +48,9 @@
         <section class="Icono wrapper" >
             <div class="links">
                 <ul>
-                    <li class="li-" data-view="grid" onclick="Ranking()" id="RANKING"><i class="fas fa-star"></i></i></i></i></li>
+                    <li class="li-" data-view="grid" onclick="Ranking()"  id="RANKING"><i class="fas fa-star"></i></i></i></i></li>
                     <li class="li-" data-view="grid" onclick="Alfabetico()" id="IconA-Z"><i class="fas fa-sort-alpha-down"></i></i></i></li>
-                    <li class="li-list " data-view="list" onclick="GRID()" id="Icon-LIST"><i class="fas fa-align-justify"></i></li>                    
+                    <li class="li-list " data-view="list" onclick="GRID()"  id="Icon-LIST"><i class="fas fa-align-justify"></i></li>                    
                     <li class="li-" data-view="grid" onclick="LISTO()" id="Icon-GRID"><i class="fas fa-th"></i></li>
                 </ul>
             </div>
