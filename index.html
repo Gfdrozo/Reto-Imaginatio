@@ -32,7 +32,7 @@
                         aria-label="Search">
                         <i class="fas fa-search" aria-hidden="true"></i>
                     </form>
-                    <h2 class="menu-contenido"> <u>Generos</u> </h2>
+                    <h2 class="menu-contenido justify-content-center"> <u>Generos</u> </h2>
                     <ul class="menu-contenido row justify-content-center row-cols-md-3 mt-4">
                         <li><a class="text-dark col" href="#"> Acción</a></li>
                         <li><a class="text-dark col" href="#"> Animación </a></li>
@@ -48,6 +48,7 @@
         <section class="Icono wrapper" >
             <div class="links">
                 <ul>
+                    <li class="li-" data-view="grid" onclick="Ranking()" id="RANKING"><i class="fas fa-star"></i></i></i></i></li>
                     <li class="li-" data-view="grid" onclick="Alfabetico()" id="IconA-Z"><i class="fas fa-sort-alpha-down"></i></i></i></li>
                     <li class="li-list " data-view="list" onclick="GRID()" id="Icon-LIST"><i class="fas fa-align-justify"></i></li>                    
                     <li class="li-" data-view="grid" onclick="LISTO()" id="Icon-GRID"><i class="fas fa-th"></i></li>
@@ -283,8 +284,19 @@
         document.getElementById('Titulo-Principal').innerHTML="Peliculas"
         document.getElementById('Subtitulo').innerHTML="A-Z"
         document.getElementById('IconA-Z').style.color='rgba(45, 43, 40,0.8)';
+        document.getElementById('RANKING').style.color='rgba(45, 43, 40,0.5)';
         
     }
+    function Ranking()
+    {
+        document.getElementById('Titulo-Principal').innerHTML="Ranking"
+        document.getElementById('Subtitulo').innerHTML="Top 100"
+        document.getElementById('IconA-Z').style.color='rgba(45, 43, 40,0.5)';
+        document.getElementById('RANKING').style.color='rgba(45, 43, 40,0.8)';
+        
+    }
+
+
     function menuMedia(x) {
         if (x.matches) { 
             $( "#menu-id" ).removeClass('Menu');
