@@ -27,7 +27,7 @@
     {
         header('Location:inicio.php?pagina=1');
     }
-if($_GET['pagina']>$paginas)
+    if($_GET['pagina']>$paginas||$_GET['pagina']<$paginas)
 {
     header('Location:inicio.php?pagina=1');
 }
@@ -91,9 +91,6 @@ $(document).ready(function(){
         <!--Final Prueba icono-->
        <section class="container Grilla" id="GRILL">
             <div class="contenedor row row justify-content-left">
-
-
-
             <?php while($mostrar=$resPeli->fetch_array())
                 {
             ?>
@@ -131,7 +128,11 @@ $(document).ready(function(){
             
               <?php for($i=0;$i<$paginas;$i++): ?>
               
-              <li class="page-item <?php echo $_GET['pagina']==$i+1? 'active' : '' ?>"><a class="page-link" href="inicio.php?pagina=<?php echo $i+1 ?>"><?php echo $i+1 ?></a></li>
+              <li class="page-item
+               <?php 
+               echo $_GET['pagina']==$i+1? 'active' : '' 
+               ?>">
+               <a class="page-link" href="inicio.php?pagina=<?php echo $i+1 ?>"><?php echo $i+1 ?></a></li>
 
               <?php endfor ?>
               
