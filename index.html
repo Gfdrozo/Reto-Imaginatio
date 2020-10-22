@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="Estilo.css">
 
 </head>
-<body onload="LISTO(),Ranking(),Valores()" >
+<body onload="LISTO(),Ranking()" >
     <section class="Cuerpo container" >
         <section class="container Cabecera">
             <!--div class="Superior"-->
@@ -181,15 +181,10 @@
                     <h4>Moana</h4>
                     <p>Animación/Infantil</p>    
                 </div>
-<<<<<<< HEAD
-                <div class="Estrellitas">
-                    <div><span class="stars-container "  id="Estrella" >★★★★★</span></div>
-=======
                 <div class="Estrellitas resultado1">
                     <div class="stars-outer">
                         <div class="stars-inner"></div>
                     </div>
->>>>>>> 36281d3b448ceed27f04f2f9ae64a6a2dc7e0afc
                 </div>
               </div>
 
@@ -199,15 +194,10 @@
                     <h4>Moana</h4>
                     <p>Animación/Infantil</p>    
                 </div>
-<<<<<<< HEAD
-                <div class="Estrellitas">
-                    <div><span class="stars-container " onload="Valores()">★★★★★</span></div>
-=======
                 <div class="Estrellitas resultado2">
                     <div class="stars-outer">
                         <div class="stars-inner"></div>
                     </div>
->>>>>>> 36281d3b448ceed27f04f2f9ae64a6a2dc7e0afc
                 </div>
               </div>
 
@@ -283,13 +273,9 @@
                     <p>Animación/Infantil</p>    
                 </div>
                 <div class="Estrellitas">
-<<<<<<< HEAD
-                    <div><span class="stars-container " >★★★★★</span></div>
-=======
                     <div class="stars-outer">
                         <div class="stars-inner"></div>
                     </div>
->>>>>>> 36281d3b448ceed27f04f2f9ae64a6a2dc7e0afc
                 </div>
               </div>
         
@@ -347,67 +333,6 @@
         
     }
 
-<<<<<<< HEAD
-    var Ran=3.5;
-    var val=(Ran*2)*10;
-    var elemento = document.getElementById("Estrella");
-
-    function Valores()
-    {  
-        if(val>=0&&val<9)
-        {
-            elemento.className += "stars-0";
-        } 
-        else if(val>=10&&val<19)
-        {
-            elemento.className += "stars-10";
-        }
-        
-        else if(val>=20&&val<29)
-        {
-            elemento.className += "stars-20";
-        }
-        else if(val>=30&&val<39)
-        {
-            elemento.className += "stars-30";
-        }
-        else if(val>=40&&val<49)
-        {
-            elemento.className += "stars-40";
-        }
-        if(val>=50&&val<59)
-        {
-            elemento.className += "stars-50";
-        } 
-        else if(val>=60&&val<69)
-        {
-            elemento.className += "stars-60";
-        }
-        
-        else if(val>=70&&val<79)
-        {
-            elemento.className += "stars-70";
-        }
-        else if(val>=80&&val<89)
-        {
-            elemento.className += "stars-80";
-        }
-        else if(val>=90&&val<99)
-        {
-            elemento.className += "stars-90";
-        }
-        else if(val==100)
-        {
-            elemento.className += "stars-100";
-        }
-    }
-
-    function menuMedia(x) {
-        if (x.matches) { 
-            $( "#menu-id" ).removeClass('Menu');
-        } else {
-            document.getElementById('menu-id').classList.add("Menu")
-=======
     function estrella(puntaje, id){
         //puntaje -> Entrada de 1 a 5 (acepta decimal)
         //Id -> Entrada de la selección, recuerda . para class y # para id
@@ -419,7 +344,6 @@
         for(var i=0; i<elements.length;i++){
             
             elements[i].style.width=PorcentajeRedondeado;
->>>>>>> 36281d3b448ceed27f04f2f9ae64a6a2dc7e0afc
         }
     }
     //Asignación de estrellas a las cartas
