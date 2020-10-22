@@ -242,6 +242,7 @@ body
     display: inline-block;
     color: transparent;
     font-size: 1.5rem;
+    white-space: nowrap;
   }
   
   .stars-container:before {
@@ -391,4 +392,26 @@ body
         font-size: 18px;
           
     }
+}
+.stars-outer{
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+}
+.stars-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    font-size: 1.5rem;
+}
+.stars-outer::before{
+    content: "★★★★★";
+    color: #ccc;
+}
+.stars-inner::before{
+    content: "★★★★★";
+    color: #f8ce0b;
 }
