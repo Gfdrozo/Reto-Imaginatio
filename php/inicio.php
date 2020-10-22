@@ -92,10 +92,10 @@ $(document).ready(function(){
     </section>
 
         <section class="container Lista" id="LISTT">
-            <div class="Lista-item horizontal">
-            <?php while($mostrar=$result->fetch_array())
+        <?php while($mostrar=$result->fetch_array())
                 {
-            ?>
+        ?>
+            <div class="Lista-item horizontal">
                 <div class="Prueba-Fondo"></div>
                 <div class="Contenido">
                     <h4><?php echo $mostrar['title']?></h4>
