@@ -34,14 +34,14 @@
 
     if(!$_GET)
     {
-        header('Location:inicio.php?pagina=1');
+        header('Location:alfabeto.php?pagina=1');
     }
     
 
     $iniciar =($_GET['pagina']-1)*$PeliPorPag;
 
-    $PeliPagina="SELECT title,avg(rating) AS calificacion, generes FROM movies INNER JOIN rating ON movies.movieId=rating.movieId GROUP BY movies.title HAVING count(title) > 20 ORDER BY avg(rating) DESC LIMIT $iniciar,$PeliPorPag";
-    $resPeli=mysqli_query($conn,$PeliPagina);
+    $PeliPagina="SELECT title,avg(rating) AS calificacion, generes FROM movies INNER JOIN rating ON movies.movieId=rating.movieId GROUP BY movies.title HAVING count(title) > 20 ORDER BY title ASC LIMIT $iniciar,$PeliPorPag";
+            $resPeli=mysqli_query($conn,$PeliPagina);
 
     ?>
 <script>
@@ -69,10 +69,10 @@
     <section class="Cuerpo container" >
         <section class="container Cabecera">
             <!--div class="Superior"-->
-                <h1 id="Titulo-Principal">Ranking</h1>
+                <h1 id="Titulo-Principal">Peliculas</h1>
                 <!--div class="iconos">Icono</div-->
             <!--/div-->
-            <h3 id="Subtitulo">Top 100 </h3>
+            <h3 id="Subtitulo">A - Z</h3>
 
             <!--        MENU DESPLEGABLE        -->
             <div id="menu-id" class="Menu">
@@ -98,10 +98,9 @@
         <section class="Icono wrapper" >
             <div class="links">
                 <ul>
-                    <li class="li-" data-view="grid" onclick="Ranking()"  id="RANKING"><i class="fas fa-star"></i></i></i></i></li>
-                  <a href="../php/alfabeto.php"">  <li class="li-" data-view="grid" id="IconA-Z"><i class="fas fa-sort-alpha-down"></i></i></i></li></a>
-                    <li class="li-list " data-view="list" onclick="GRID()"  id="Icon-LIST"><i class="fas fa-align-justify"></i></li>                    
-                    <li class="li-" data-view="grid" onclick="LISTO()" id="Icon-GRID"><i class="fas fa-th"></i></li>
+                   <a href="../php/inicio.php"> <li class="li-" data-view="grid" onclick="Ranking()"  id="RANKING"><i class="fas fa-star"></i></i></i></i></li></a>
+                  <a href="../php/alfabeto.php" id="alfab">  <li class="li-" data-view="grid" onclick="Alfabetico()" id="IconA-Z"><i class="fas fa-sort-alpha-down"></i></i></i></li></a>
+                  
                 </ul>
             </div>
         </section>
@@ -136,19 +135,7 @@
             </div>
     </section>
 
-        <section class="container Lista" id="LISTT">
-            <div class="Lista-item horizontal">
-                <div class="Prueba-Fondo"></div>
-                <div class="Contenido">
-                    <h4><?php echo $mostrar['title']?></h4>
-                    <p><?php echo $mostrar['generes']?></p>    
-                </div>
-                <div class="Estrellitas">
-                    <div><span class="stars-container stars-80">★★★★★</span></div>
-                </div>
-              </div>
-            
-        </section>    
+
 
         <nav class="container ">
             <ul class="pagination paginacion">
@@ -171,6 +158,7 @@
     </section>
 
     <script>
+        /*
         function GRID()
         {
         document.getElementById('GRILL').style.display='none';
@@ -203,7 +191,7 @@
             document.getElementById('RANKING').style.color='rgba(45, 43, 40,0.8)';
 
         }
-
+*/
         
         //Asignación de estrellas a las cartas
  

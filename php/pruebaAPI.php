@@ -6,11 +6,14 @@
     </head>
     <body>
         <!--<h1>now I´m trying to use the api</h1>-->
-        <img src="https://image.tmdb.org/t/p/w500/3nYlM34QhzdtAvWRV5bN4nLtnTc.jpg" alt="Jaws">
+        <!--<img src="https://image.tmdb.org/t/p/w500/3nYlM34QhzdtAvWRV5bN4nLtnTc.jpg" alt="Jaws">-->
         
         <script type ="text/javascript">
-        var APIKEY = '20e9b6ba65d68edc7373696642c68593';
-        let baseURL = 'https://api.themoviedb.org/3/';
+
+
+
+        var APIKEY = '3d62eca23ba2cc9dd6f6d5aba7c1c109';
+        let baseURL = 'http://image.tmdb.org/t/p/';
         let configData = null;
         let baseImageURL = null;
         
@@ -38,7 +41,7 @@
             .then(result=>result.json())
             .then((data)=>{
                 //process the returned data
-                document.getElementById('output').innerHTML = JSON.stringify(data, null, 4);
+                //document.getElementById('output').innerHTML = JSON.stringify(data, null, 4);
                 //work with results array...
                 
             })

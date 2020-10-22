@@ -40,7 +40,7 @@
     $prueba="SELECT movieId from rating WHERE rating=5 ";
     
 
-    $promrating="SELECT title,avg(rating) AS Calificacion, count(title) FROM movies INNER JOIN rating ON movies.movieId=rating.movieId GROUP BY movies.title HAVING count(title) > 20 ORDER BY avg(rating) DESC";
+    $promrating="SELECT title,avg(rating) AS calificacion, generes FROM movies INNER JOIN rating ON movies.movieId=rating.movieId GROUP BY movies.title HAVING count(title) > 20 ORDER BY avg(rating) DESC";
 
     $result=mysqli_query($conn,$promrating);
     while($mostrar=$result->fetch_array())

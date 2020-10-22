@@ -1,10 +1,8 @@
 $(document).ready(() => {
     
     
-    fillCard('#result1');
-    fillCard('#result2');
-    fillCard('#result3')
-    fillCard('#result4')
+    fillCard('#result');
+    
 })
 
 function mergeMovies(searchText, date) {
