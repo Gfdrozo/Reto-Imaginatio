@@ -296,14 +296,57 @@
         
     }
 
-    var val=40;
+    var Ran=1.5;
+    var val=(Ran*2)*10;
     var elemento = document.getElementById("Estrella");
 
     function Valores()
     {  
-         if(val==40)
+        if(val>=0&&val<9)
+        {
+            elemento.className += "stars-0";
+        } 
+        else if(val>=10&&val<19)
+        {
+            elemento.className += "stars-10";
+        }
+        
+        else if(val>=20&&val<29)
+        {
+            elemento.className += "stars-20";
+        }
+        else if(val>=30&&val<39)
+        {
+            elemento.className += "stars-30";
+        }
+        else if(val>=40&&val<49)
         {
             elemento.className += "stars-40";
+        }
+        if(val>=50&&val<59)
+        {
+            elemento.className += "stars-50";
+        } 
+        else if(val>=60&&val<69)
+        {
+            elemento.className += "stars-60";
+        }
+        
+        else if(val>=70&&val<79)
+        {
+            elemento.className += "stars-70";
+        }
+        else if(val>=80&&val<89)
+        {
+            elemento.className += "stars-80";
+        }
+        else if(val>=90&&val<99)
+        {
+            elemento.className += "stars-90";
+        }
+        else if(val==100)
+        {
+            elemento.className += "stars-100";
         }
     }
 
