@@ -2,6 +2,6 @@
     <head>
     </head>
     <body>
-        Hola_Mundo
+        Hola
     </body>
 </html>
