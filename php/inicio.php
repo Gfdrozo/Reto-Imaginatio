@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reto Endava</title>
     <link rel="icon" href="Imagenes/favicon.png">
-    
+    <link href="../css/starrr.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" >
     <script src="https://kit.fontawesome.com/f4a88d7b2c.js" crossorigin="anonymous"></script>
+    <script src="../js/starrr.js"></script>
     <link rel="stylesheet" href="../Estilo.css">
     <?php
         include("../php/conexion.php");
+        $promrating="SELECT title,avg(rating) AS calificacion, generes FROM movies INNER JOIN rating ON movies.movieId=rating.movieId GROUP BY movies.title HAVING count(title) > 20 ORDER BY avg(rating) DESC";
+
+    $result=mysqli_query($conn,$promrating);
     ?>
+    <script src="js/jquery.rating.pack.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script>
+$(document).ready(function(){
+    $('input.star').rating();
+});
+</script>
 </head>
 <body onload="LISTO(),Ranking()" >
     <section class="Cuerpo container" >
@@ -61,29 +73,42 @@
         <!--Final Prueba icono-->
        <section class="container Grilla" id="GRILL">
             <div class="contenedor row row justify-content-left">
-            
+            <?php while($mostrar=$result->fetch_array())
+                {
+            ?>
                 <div class="card col p-0">
-                    <div class="Prueba-Fondo"></div>
+                   <div class="Prueba-Fondo"></div>
                     <div class="Contenido">
-                        <h4>Moana</h4>
-                        <p>Animación/Infantil</p>  
+                        <h4><?php echo $mostrar['title']?></h4>
+                        <p><?php echo $mostrar['generes']?></p>  
                         <div><span class="stars-container stars-80">★★★★★</span></div>
                     </div>
                 </div>
+                <?php
+        }
+
+        ?>
             </div>
     </section>
 
         <section class="container Lista" id="LISTT">
             <div class="Lista-item horizontal">
+            <?php while($mostrar=$result->fetch_array())
+                {
+            ?>
                 <div class="Prueba-Fondo"></div>
                 <div class="Contenido">
-                    <h4>Moana</h4>
-                    <p>Animación/Infantil</p>    
+                    <h4><?php echo $mostrar['title']?></h4>
+                    <p><?php echo $mostrar['generes']?></p>    
                 </div>
                 <div class="Estrellitas">
                     <div><span class="stars-container stars-80">★★★★★</span></div>
                 </div>
               </div>
+              <?php
+        }
+
+        ?>
         </section>    
 
         <nav class="container ">
@@ -102,7 +127,12 @@
 
     </section>
     
-
+<script>
+$('#Estrellas').starrr();
+({
+    rating:3,
+});
+</script>
 
 <script>
     function GRID()
@@ -152,7 +182,6 @@
     x.addListener(menuMedia)
 </script>    
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
 </body>
 </html>

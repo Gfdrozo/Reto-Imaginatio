@@ -61,8 +61,8 @@
 
     </section>
     <script>
-    $(document).ready(function()
-    {
+        $(document).ready(function()
+        {
         $('#grilla').click(function()
         {
           $('#Contenido').load("../php/grilla.php");
