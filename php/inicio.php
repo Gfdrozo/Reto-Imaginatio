@@ -22,6 +22,21 @@
     $TotalPelis=mysqli_num_rows($result);
     $PeliPorPag=8;
     $paginas= ceil($TotalPelis/$PeliPorPag);
+
+    if(!$_GET)
+    {
+        header('Location:inicio.php?pagina=1');
+    }
+if($_GET['pagina']>$paginas)
+{
+    header('Location:inicio.php?pagina=1');
+}
+
+    $iniciar =($_GET['pagina']-1)*$PeliPorPag;
+
+    $PeliPagina="SELECT title,avg(rating) AS calificacion, generes FROM movies INNER JOIN rating ON movies.movieId=rating.movieId GROUP BY movies.title HAVING count(title) > 20 ORDER BY avg(rating) DESC LIMIT $iniciar,$PeliPorPag";
+    $resPeli=mysqli_query($conn,$PeliPagina);
+
     ?>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -76,7 +91,10 @@ $(document).ready(function(){
         <!--Final Prueba icono-->
        <section class="container Grilla" id="GRILL">
             <div class="contenedor row row justify-content-left">
-            <?php while($mostrar=$result->fetch_array())
+
+
+
+            <?php while($mostrar=$resPeli->fetch_array())
                 {
             ?>
                 <div class="card col p-0">
@@ -110,18 +128,14 @@ $(document).ready(function(){
 
         <nav class="container ">
             <ul class="pagination paginacion">
-              <li class="page-item disabled">
-                <a class="page-link" href="inicio.php?pagina=<?php echo $_GET['pagina']-1 ?> " tabindex="-1" aria-disabled="true">Previous</a>
-              </li>
+            
               <?php for($i=0;$i<$paginas;$i++): ?>
               
-              <li class="page-item"><a class="page-link" href="inicio.php?pagina=<?php echo $i+1 ?>"><?php echo $i+1 ?></a></li>
+              <li class="page-item <?php echo $_GET['pagina']==$i+1? 'active' : '' ?>"><a class="page-link" href="inicio.php?pagina=<?php echo $i+1 ?>"><?php echo $i+1 ?></a></li>
 
               <?php endfor ?>
               
 
-              <li class="page-item <?php echo $_GET['pagina']>=$paginas? 'disabled': '' ?>">
-                <a class="page-link" href="inicio.php?pagina=<?php echo $_GET['pagina']+1 ?> ">Next</a>
               </li>
             </ul>
           </nav>
