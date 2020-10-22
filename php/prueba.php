@@ -29,168 +29,6 @@
 </head>
 
 <body>
-    <section class="Cuerpo container">
-        <section class="container Cabecera">
-            <!--div class="Superior"-->
-                <h1>Ranking</h1>
-                <!--div class="iconos">Icono</div-->
-            <!--/div-->
-            <h3>Top 100 </h3>
-
-            <!--        MENU DESPLEGABLE        -->
-            <div id="menu-id" class="Menu">
-                <div class="contenedor-menu">
-                    <form class="form-inline flex-nowrap menu-contenido mt-5 mb-5">
-                        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-                        aria-label="Search">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </form>
-                    <h2 class="menu-contenido"> <u>Generos</u> </h2>
-                    <ul class="menu-contenido row justify-content-center row-cols-md-3 mt-4">
-                        <li><a class="text-dark col" href="#"> Acción</a></li>
-                        <li><a class="text-dark col" href="#"> Animación </a></li>
-                        <li><a class="text-dark col" href="#"> Aventura </a></li>
-                        <li><a class="text-dark col" href="#"> Comedia </a></li>
-                        <li><a class="text-dark col" href="#"> Suspenso </a></li>
-                    </ul>
-                </div>
-            </div>    
-
-        </section>
-        <!--Prueba icono-->
-        <section class="Icono wrapper" >
-            <div class="links">
-                <ul>
-                    <li class="li-list " data-view="list" onclick="GRID()" id="Icon-LIST"><i class="fas fa-align-justify"></i></li>                    
-                    <li class="li-" data-view="grid" onclick="LISTO()" id="Icon-GRID"><i class="fas fa-th"></i></li>
-                </ul>
-            </div>
-        </section>
-        <div id="Contenido">
-
-           
-            <section class="container Grilla" id="GRILL">
-                <div class="contenedor row row justify-content-left">
-
-                    <div class="card col p-0">
-                        <div class="Prueba-Fondo"></div>
-                        <div class="Contenido">
-                            <h4>Moana</h4>
-                            <p>Animación/Infantil</p>  
-                            <div><span class="stars-container stars-80">★★★★★</span></div>
-                        </div>
-                    </div>
-
-               
-                </div>
-
-            </section>
-            <section class="container Lista" id="LISTT">
-                <div class="Lista-item horizontal">
-                    <div class="Prueba-Fondo"></div>
-                    <div class="Contenido">
-                        <h4>Moana</h4>
-                        <p>Animación/Infantil</p>    
-                    </div>
-                    <div class="Estrellitas">
-                        <div><span class="stars-container stars-80">★★★★★</span></div>
-                    </div>
-                  </div>
-
-                  <div class="Lista-item horizontal">
-                    <div class="Prueba-Fondo"></div>
-                    <div class="Contenido">
-                        <h4>Moana</h4>
-                        <p>Animación/Infantil</p>    
-                    </div>
-                    <div class="Estrellitas">
-                        <div><span class="stars-container stars-80">★★★★★</span></div>
-                    </div>
-                  </div>
-
-                  <div class="Lista-item horizontal">
-                    <div class="Prueba-Fondo"></div>
-                    <div class="Contenido">
-                        <h4>Moana</h4>
-                        <p>Animación/Infantil</p>    
-                    </div>
-                    <div class="Estrellitas">
-                        <div><span class="stars-container stars-80">★★★★★</span></div>
-                    </div>
-                  </div>
-
-                  <div class="Lista-item horizontal">
-                    <div class="Prueba-Fondo"></div>
-                    <div class="Contenido">
-                        <h4>Moana</h4>
-                        <p>Animación/Infantil</p>    
-                    </div>
-                    <div class="Estrellitas">
-                        <div><span class="stars-container stars-80">★★★★★</span></div>
-                    </div>
-                  </div>
-
-                  <div class="Lista-item horizontal">
-                    <div class="Prueba-Fondo"></div>
-                    <div class="Contenido">
-                        <h4>Moana</h4>
-                        <p>Animación/Infantil</p>    
-                    </div>
-                    <div class="Estrellitas">
-                        <div><span class="stars-container stars-80">★★★★★</span></div>
-                    </div>
-                  </div>
-
-                  <div class="Lista-item horizontal">
-                    <div class="Prueba-Fondo"></div>
-                    <div class="Contenido">
-                        <h4>Moana</h4>
-                        <p>Animación/Infantil</p>    
-                    </div>
-                    <div class="Estrellitas">
-                        <div><span class="stars-container stars-80">★★★★★</span></div>
-                    </div>
-                  </div>
-
-                  <div class="Lista-item horizontal">
-                    <div class="Prueba-Fondo"></div>
-                    <div class="Contenido">
-                        <h4>Moana</h4>
-                        <p>Animación/Infantil</p>    
-                    </div>
-                    <div class="Estrellitas">
-                        <div><span class="stars-container stars-80">★★★★★</span></div>
-                    </div>
-                  </div>
-
-                  <div class="Lista-item horizontal">
-                    <div class="Prueba-Fondo"></div>
-                    <div class="Contenido">
-                        <h4>Moana</h4>
-                        <p>Animación/Infantil</p>    
-                    </div>
-                    <div class="Estrellitas">
-                        <div><span class="stars-container stars-80">★★★★★</span></div>
-                    </div>
-                  </div>
-
-                </section>    
-</div>
-        <nav class="container ">
-            <ul class="pagination paginacion">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
-            </ul>
-          </nav>
-
-    </section>
     
 
     <section class="container">
@@ -207,7 +45,7 @@
     $result=mysqli_query($conn,$promrating);
     while($mostrar=$result->fetch_array())
     {
-        ?>
+    ?>
         <div class="row">
         <div class="col datos">
         <?php
@@ -223,32 +61,20 @@
 
     </section>
     <script>
-    function GRID()
+    $(document).ready(function()
     {
-        document.getElementById('GRILL').style.display='none';
-        document.getElementById('Icon-LIST').style.color='rgba(45, 43, 40,0.8)';
-        document.getElementById('Icon-GRID').style.color='rgba(45, 43, 40,0.5)';
-        document.getElementById('LISTT').style.display='';
-        
-    }
-    function LISTO()
-    {
-        document.getElementById('GRILL').style.display='';
-        document.getElementById('Icon-GRID').style.color='rgba(45, 43, 40,0.8)';
-        document.getElementById('Icon-LIST').style.color='rgba(45, 43, 40,0.5)';
-        document.getElementById('LISTT').style.display='none';
-    }
-    function menuMedia(x) {
-        if (x.matches) { 
-            $( "#menu-id" ).removeClass('Menu');
-        } else {
-            document.getElementById('menu-id').classList.add("Menu")
-        }
-    }
+        $('#grilla').click(function()
+        {
+          $('#Contenido').load("../php/grilla.php");
+        });
 
-    var x = window.matchMedia("(max-width: 720px)")
-    menuMedia(x)
-    x.addListener(menuMedia)
+        $('#lista').click(function()
+        {
+          $('#Contenido').load("/php/lista.php");
+        });
+
+    });
+
 </script>    
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
