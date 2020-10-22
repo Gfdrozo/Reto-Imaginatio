@@ -19,7 +19,7 @@
         $promrating="SELECT title,avg(rating) AS calificacion, generes FROM movies INNER JOIN rating ON movies.movieId=rating.movieId GROUP BY movies.title HAVING count(title) > 20 ORDER BY avg(rating) DESC";
 
     $result=mysqli_query($conn,$promrating);
-    $TotalPelis=mysql
+    $TotalPelis=mysqli_num_rows($result);
     $PeliPorPag=8;
     $paginas= ceil($TotalPelis/$PeliPorPag);
     ?>
@@ -111,25 +111,23 @@ $(document).ready(function(){
         <nav class="container ">
             <ul class="pagination paginacion">
               <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                <a class="page-link" href="inicio.php?pagina=<?php echo $_GET['pagina']-1 ?> " tabindex="-1" aria-disabled="true">Previous</a>
               </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
+              <?php for($i=0;$i<$paginas;$i++): ?>
+              
+              <li class="page-item"><a class="page-link" href="inicio.php?pagina=<?php echo $i+1 ?>"><?php echo $i+1 ?></a></li>
+
+              <?php endfor ?>
+              
+
+              <li class="page-item <?php echo $_GET['pagina']>=$paginas? 'disabled': '' ?>">
+                <a class="page-link" href="inicio.php?pagina=<?php echo $_GET['pagina']+1 ?> ">Next</a>
               </li>
             </ul>
           </nav>
 
     </section>
-    
-<script>
-$('#Estrellas').starrr();
-({
-    rating:3,
-});
-</script>
+
 
 <script>
     function GRID()
